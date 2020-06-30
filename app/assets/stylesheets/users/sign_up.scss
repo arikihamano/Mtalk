@@ -1,0 +1,45 @@
+$main-color: #428bca;
+$main-text-color: #fff;
+
+body {
+  overflow: visible;
+}
+
+.notice,
+.alert {
+  display: none;
+}
+
+.sinupPage {
+  .header {
+    padding: 20px;
+    text-align: center;
+    background: $main-color;
+    color: $main-text-color;
+  }
+  .userProfileImg {
+    position: relative;
+    margin: 0 auto 10px auto;
+    width: 100px;
+    height: 100px;
+    background: #428bca;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    .fa-camera {
+      color: #fff;
+    }
+  }
+  .submitBtn {
+    background: $main-color;
+    color: $main-text-color;
+    width: 200px;
+    padding: 10px;
+    border-radius: 90px;
+    transition: opacity 0.5s;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
