@@ -10,15 +10,13 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
   <%= form.hidden_field :room_id, value: room.id %>
-  
-  <div class="actions">
-    <%= form.submit %>
+
+  <div class="input-group">
+    <%= form.text_field :content, placeholder: "メッセージを入力...", class: "form-control mr-2" %>
+    <div class="input-group-append">
+      <%= form.submit "送信する", class: "btn btn-primary" %>
+    </div>
   </div>
+
 <% end %>
