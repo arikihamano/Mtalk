@@ -2,7 +2,8 @@ class SendMessageJob < ApplicationJob
   queue_as :default
 
   def perform(message)
-    html = ApplicationController.render(
+    html = ApplicationController.render_with_signed_in_user(
+      message.user,
       partial: 'messages/message',
       locals: { message: message }
     )
