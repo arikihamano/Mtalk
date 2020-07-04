@@ -11,3 +11,4 @@ class SendMessageJob < ApplicationJob
     ActionCable.server.broadcast "room_channel_#{message.room_id}", html: html
   end
 end
+
