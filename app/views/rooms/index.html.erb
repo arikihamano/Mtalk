@@ -3,13 +3,14 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3">
+    <div class="col-3 rooms-sidebar">
       <div class="card no-outline">
         <div class="card-body">
           <small>Logged in as</small><br>
           <b><%= current_user.name %></b>
         </div>
       </div>
+      <hr>
       <%= render 'form', room: Room.new %>
       <hr>
       <% @rooms.each do |room| %>
