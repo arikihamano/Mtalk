@@ -13,10 +13,13 @@
       <%= render 'form', room: Room.new %>
       <hr>
       <% @rooms.each do |room| %>
-        <%= link_to room do %>
-          <div class="card mb-2">
+        <%= link_to room, class: 'room-link' do %>
+          <div class="card no-outline mb-2 room-card">
             <div class="card-body">
-              <%= room.name %>
+              <span class="name"><%= room.name %></span><br>
+              <span class="member-count">
+                <small><%= room.users.uniq.count %>Members</small>
+              </span>
             </div>
           </div>
         <% end %>
