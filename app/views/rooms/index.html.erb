@@ -14,7 +14,8 @@
       <hr>
       <% @rooms.each do |room| %>
         <%= link_to room, class: 'room-link' do %>
-          <div class="card no-outline mb-2 room-card">
+          <% active_class = (@room == room) ? 'active' : '' %>
+          <div class="card no-outline mb-2 room-card <%= active_class%>">
             <div class="card-body">
               <span class="name"><%= room.name %></span><br>
               <span class="member-count">

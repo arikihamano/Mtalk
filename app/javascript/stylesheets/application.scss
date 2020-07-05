@@ -55,14 +55,23 @@
     transition: background-color 0.5s ease;
     border-radius: 20px;
     &:hover {
-      background-color: #eee;
+      background-color: #eeeeee;
+    }
+    &.active {
+      background-color: black;
+      .name {
+        color: white;
+      }
+      .member-count {
+        color: #e0e0e0;
+      }
     }
     .name {
       font-weight: bold;
       color: black;
     }
     .member-count {
-      color: #777;
+      color: #777777;
       font-weight: light;
     }
   }
