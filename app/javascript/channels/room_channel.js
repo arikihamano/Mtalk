@@ -25,11 +25,10 @@ document.addEventListener("turbolinks:load", () => {
       received(data) {
         const user_element = document.getElementById("user-id");
         const user_id = Number(user_element.getAttribute("data-user-id"));
-
-        let html = data.theirs;
-
-        const messageContainer = document.getElementById("messages");
-        messageContainer.innerHTML = messageContainer.innerHTML + html;
+        if (user_id != data.message.user_id) {
+          const messageContainer = document.getElementById("messages");
+          messageContainer.innerHTML = messageContainer.innerHTML + data.html;
+        }
       },
     }
   );
