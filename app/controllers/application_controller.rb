@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
-
-  helper_method :current_user
+  include ActionController::Cookies 
 
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
@@ -12,6 +11,11 @@ class ApplicationController < ActionController::Base
     renderer = self.renderer.new('warden' => proxy)
     renderer.render(*args)
   end
+
+  # 教材では@current_user.id
+  cookies[:user_id] = current_user.id
+
+
 
   protected
 
