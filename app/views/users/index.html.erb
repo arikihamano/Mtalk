@@ -1,0 +1,25 @@
+<div class="topPage">
+  <section id="team" class="pb-5">
+      <div class="container">
+          <div class="row">
+            <% @users.each do |user| %>
+              <div class="col-xs-12 col-sm-4 col-md-3">
+                  <div class="user-box">
+                      <div class="card">
+                          <div class="card-body text-center">
+                              <p><img class=" img-fluid" src="<%= user.img_name %>" alt="card image"></p>
+                              <h4><%= link_to user.name, user_path(user[:id]), class: "card-title" %></h4>
+                              <p class="card-text"><%= user.email %></p>
+                              <%# <%= form_tag :chat_index, method: :post do %> 
+                                <input name="user_id" type="hidden" value="<%= user.id %>" />
+                                <%= submit_tag 'チャットを開く', class: "btn btn-primary btn-sm mb-2" %>
+                              <%# <% end %>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            <% end %>
+          </div>
+      </div>
+  </section>
+</div>

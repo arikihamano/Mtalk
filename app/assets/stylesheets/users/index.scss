@@ -1,0 +1,44 @@
+#team {
+  background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #6bb7fa;
+  border-color: #6bb7fa;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #428bca;
+}
+
+section {
+  padding: 60px 0;
+}
+
+#team .card {
+  border: none;
+  background: #ffffff;
+}
+
+.user-box {
+  margin-bottom: 30px;
+}
+
+.user-box .card {
+  min-height: 312px;
+}
+
+.user-box .card .card-title {
+  color: #428bca !important;
+}
+
+.user-box .card .card-body img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
